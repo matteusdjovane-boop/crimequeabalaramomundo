@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crimes que Abalaram o Mundo - Casos Notórios</title>
+    <!-- Incluindo Tailwind CSS para estilização -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117; /* Fundo escuro */
+            color: #e6edf3; /* Texto claro */
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(220, 38, 38, 0.2);
+        }
+        .tts-button {
+            background-color: #3b82f6;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover:not(:disabled) {
+            background-color: #2563eb;
+        }
+        .tts-button:disabled {
+            background-color: #4b5563;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body class="min-h-screen p-4 sm:p-8">
+
+    <!-- Cabeçalho Principal -->
+    <header class="text-center mb-12">
+        <h1 class="text-4xl sm:text-6xl font-extrabold text-red-500 tracking-tight mb-2">
+            CRIMES QUE ABALARAM O MUNDO
+        </h1>
+        <p class="text-xl sm:text-2xl font-light text-gray-400">
+            Análise de Casos de Grande Repercussão Nacional e Internacional
+        </p>
+    </header>
+
+    <!-- Seção de Casos Internacionais -->
+    <section class="max-w-7xl mx-auto mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-red-500 border-b border-red-700 pb-2">
+            Criminosos Internacionais Notórios (EUA)
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <!-- Card 1: Jeffrey Dahmer -->
+            <div id="card-dahmer" class="card bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-red-700/50 p-4 flex flex-col">
+                <!-- Imagem Placeholder -->
+                <div class="h-40 bg-gray-700 flex items-center justify-center rounded-lg mb-4">
+                    <span class="text-gray-400 text-lg">Jeffrey Dahmer</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-red-400">
+                    Jeffrey Dahmer (Canibal de Milwaukee)
+                </h3>
+                <p class="text-sm text-gray-400 mb-3">
+                    EUA | Homicídio em Série, Canibalismo
+                </p>
+                <p class="text-gray-300 leading-relaxed text-sm flex-grow tts-text">
+                    Assassino em série que matou e desmembrou 17 homens e meninos. Seus crimes chocaram os EUA, envolvendo necrofilia e canibalismo.
+                </p>
+                <div class="mt-4 flex flex-col items-center">
+                    <button onclick="playTTS(this)" class="tts-button w-full mb-2">
+                        ✨ Ouvir Descrição
+                    </button>
+                    <p class="text-xs text-gray-500 tts-status"></p>
+                </div>
+            </div>
+
+            <!-- Card 2: Ed Gein -->
+            <div id="card-gein" class="card bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-red-700/50 p-4 flex flex-col">
+                <!-- Imagem Placeholder -->
+                <div class="h-40 bg-gray-700 flex items-center justify-center rounded-lg mb-4">
+                    <span class="text-gray-400 text-lg">Ed Gein</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-red-400">
+                    Ed Gein (Açougueiro de Plainfield)
+                </h3>
+                <p class="text-sm text-gray-400 mb-3">
+                    EUA | Homicídio, Violação de Sepulturas
+                </p>
+                <p class="text-gray-300 leading-relaxed text-sm flex-grow tts-text">
+                    Criminoso cujas ações de exumar corpos e criar objetos com restos humanos inspiraram filmes de terror clássicos como "Psicose".
+                </p>
+                <div class="mt-4 flex flex-col items-center">
+                    <button onclick="playTTS(this)" class="tts-button w-full mb-2">
+                        ✨ Ouvir Descrição
+                    </button>
+                    <p class="text-xs text-gray-500 tts-status"></p>
+                </div>
+            </div>
+
+            <!-- Card 3: Henry Lee Lucas -->
+            <div id="card-lucas" class="card bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-red-700/50 p-4 flex flex-col">
+                <!-- Imagem Placeholder -->
+                <div class="h-40 bg-gray-700 flex items-center justify-center rounded-lg mb-4">
+                    <span class="text-gray-400 text-lg">Henry Lee Lucas</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-red-400">
+                    Henry Lee Lucas
+                </h3>
+                <p class="text-sm text-gray-400 mb-3">
+                    EUA | Homicídio em Série
+                </p>
+                <p class="text-gray-300 leading-relaxed text-sm flex-grow tts-text">
+                    Famoso por ter feito confissões em massa de centenas de homicídios, embora a maioria tenha sido descartada, expondo problemas nas investigações da época.
+                </p>
+                <div class="mt-4 flex flex-col items-center">
+                    <button onclick="playTTS(this)" class="tts-button w-full mb-2">
+                        ✨ Ouvir Descrição
+                    </button>
+                    <p class="text-xs text-gray-500 tts-status"></p>
+                </div>
+            </div>
+
+            <!-- Card 4: Patty Cannon (Histórica) -->
+            <div id="card-cannon" class="card bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-red-700/50 p-4 flex flex-col">
+                <!-- Imagem Placeholder -->
+                <div class="h-40 bg-gray-700 flex items-center justify-center rounded-lg mb-4">
+                    <span class="text-gray-400 text-lg">Patty Cannon</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-red-400">
+                    Patty Cannon
+                </h3>
+                <p class="text-sm text-gray-400 mb-3">
+                    EUA (Século XIX) | Líder de Gangue de Sequestro
+                </p>
+                <p class="text-gray-300 leading-relaxed text-sm flex-grow tts-text">
+                    Líder de uma infame gangue que sequestrava negros livres e escravos fugitivos para revendê-los no Sul dos EUA no século XIX, notável por sua crueldade.
+                </p>
+                <div class="mt-4 flex flex-col items-center">
+                    <button onclick="playTTS(this)" class="tts-button w-full mb-2">
+                        ✨ Ouvir Descrição
+                    </button>
+                    <p class="text-xs text-gray-500 tts-status"></p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Seção de Casos Brasileiros (Tremembé e Outros) -->
+    <section class="max-w-7xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-red-500 border-b border-red-700 pb-2">
+            Casos Brasileiros de Grande Repercussão
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+            
+            <!-- Card 5: Suzane von Richthofen -->
+            <div id="card-richthofen" class="card bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-red-700/50 p-4">
+                <!-- Imagem Placeholder -->
+                <div class="h-32 bg-gray-700 flex items-center justify-center rounded-lg mb-4">
+                    <span class="text-gray-400 text-sm">Suzane von Richthofen</span>
+                </div>
+                <h3 class="text-lg font-bold mb-1 text-red-400">
+                    Suzane von Richthofen
+                </h3>
+                <p class="text-xs text-gray-400 mb-2">
+                    Parricídio | Caso de 2002
+                </p>
+                <p class="text-gray-300 leading-snug text-sm tts-text">
+                    Condenada por planejar e executar o assassinato dos seus pais. É um dos nomes mais associados à penitenciária de Tremembé (P2).
+                </p>
+                <div class="mt-4 flex flex-col items-center">
+                    <button onclick="playTTS(this)" class="tts-button w-full mb-2">
+                        ✨ Ouvir Descrição
+                    </button>
+                    <p class="text-xs text-gray-500 tts-status"></p>
+                </div>
+            </div>
+
+            <!-- Card 6: Elize Matsunaga -->
+            <div id="card-matsunaga" class="card bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-red-700/50 p-4">
+                <!-- Imagem Placeholder -->
+                <div class="h-32 bg-gray-700 flex items-center justify-center rounded-lg mb-4">
+                    <span class="text-gray-400 text-sm">Elize Matsunaga</span>
+                </div>
+                <h3 class="text-lg font-bold mb-1 text-red-400">
+                    Elize Matsunaga
+                </h3>
+                <p class="text-xs text-gray-400 mb-2">
+                    Homicídio e Esquartejamento | Caso de 2012
+                </p>
+                <p class="text-gray-300 leading-snug text-sm tts-text">
+                    Assassina de seu marido, Marcos Matsunaga. Sua pena foi cumprida, em parte, na unidade feminina de Tremembé.
+                </p>
+                <div class="mt-4 flex flex-col items-center">
+                    <button onclick="playTTS(this)" class="tts-button w-full mb-2">
+                        ✨ Ouvir Descrição
+                    </button>
+                    <p class="text-xs text-gray-500 tts-status"></p>
+                </div>
+            </div>
+
+            <!-- Card 7: Caso Nardoni -->
+            <div id="card-nardoni" class="card bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-red-700/50 p-4">
+                <!-- Imagem Placeholder -->
+                <div class="h-32 bg-gray-700 flex items-center justify-center rounded-lg mb-4">
+                    <span class="text-gray-400 text-sm">Alexandre e Anna Carolina Nardoni</span>
+                </div>
+                <h3 class="text-lg font-bold mb-1 text-red-400">
+                    Caso Nardoni
+                </h3>
+                <p class="text-xs text-gray-400 mb-2">
+                    Homicídio Qualificado | Caso de 2008
+                </p>
+                <p class="text-gray-300 leading-snug text-sm tts-text">
+                    Condenação pela morte da menina Isabella Nardoni. A comoção nacional fez com que o casal fosse transferido para a região de Tremembé.
+                </p>
+                <div class="mt-4 flex flex-col items-center">
+                    <button onclick="playTTS(this)" class="tts-button w-full mb-2">
+                        ✨ Ouvir Descrição
+                    </button>
+                    <p class="text-xs text-gray-500 tts-status"></p>
+                </div>
+            </div>
+
+            <!-- Card 8: Maníaco do Parque -->
+            <div id="card-maniaco" class="card bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-red-700/50 p-4">
+                <!-- Imagem Placeholder -->
+                <div class="h-32 bg-gray-700 flex items-center justify-center rounded-lg mb-4">
+                    <span class="text-gray-400 text-sm">Francisco de Assis Pereira</span>
+                </div>
+                <h3 class="text-lg font-bold mb-1 text-red-400">
+                    Maníaco do Parque
+                </h3>
+                <p class="text-xs text-gray-400 mb-2">
+                    Homicídios e Estupros em Série | Caso de 1998
+                </p>
+                <p class="text-gray-300 leading-snug text-sm tts-text">
+                    Francisco de Assis Pereira atraía e matava mulheres no Parque do Estado, em São Paulo. Foi condenado a centenas de anos de prisão.
+                </p>
+                <div class="mt-4 flex flex-col items-center">
+                    <button onclick="playTTS(this)" class="tts-button w-full mb-2">
+                        ✨ Ouvir Descrição
+                    </button>
+                    <p class="text-xs text-gray-500 tts-status"></p>
+                </div>
+            </div>
+
+            <!-- Card 9: Pai e Filho de Rio Preto -->
+            <div id="card-riopreto" class="card bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-red-700/50 p-4">
+                <!-- Imagem Placeholder -->
+                <div class="h-32 bg-gray-700 flex items-center justify-center rounded-lg mb-4">
+                    <span class="text-gray-400 text-sm">Gilberto e Marcelo</span>
+                </div>
+                <h3 class="text-lg font-bold mb-1 text-red-400">
+                    Pai e Filho de Rio Preto
+                </h3>
+                <p class="text-xs text-gray-400 mb-2">
+                    Homicídios em Série | Caso de 2006
+                </p>
+                <p class="text-gray-300 leading-snug text-sm tts-text">
+                    Gilberto Fernandes e seu filho, Marcelo, foram condenados por uma série de assassinatos de jovens na região de São José do Rio Preto.
+                </p>
+                <div class="mt-4 flex flex-col items-center">
+                    <button onclick="playTTS(this)" class="tts-button w-full mb-2">
+                        ✨ Ouvir Descrição
+                    </button>
+                    <p class="text-xs text-gray-500 tts-status"></p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="mt-12 pt-6 border-t border-gray-700 text-center text-gray-500">
+        <p class="text-sm">&copy; 2024 Crimes que Abalaram o Mundo | Análise de Casos Notórios.</p>
+    </footer>
+
+    <!-- Lógica de Áudio (Text-to-Speech) -->
+    <script>
+        // Variáveis globais para a API
+        const apiKey = "";
+        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${apiKey}`;
+
+        // Função utilitária para converter Base64 para ArrayBuffer
+        function base64ToArrayBuffer(base64) {
+            const binaryString = atob(base64);
+            const len = binaryString.length;
+            const bytes = new Uint8Array(len);
+            for (let i = 0; i < len; i++) {
+                bytes[i] = binaryString.charCodeAt(i);
+            }
+            return bytes.buffer;
+        }
+
+        // Função utilitária para converter PCM 16-bit para formato WAV
+        function pcmToWav(pcm16, sampleRate = 16000) {
+            const numChannels = 1;
+            const bytesPerSample = 2; // 16-bit PCM
+
+            const buffer = new ArrayBuffer(44 + pcm16.length * bytesPerSample);
+            const view = new DataView(buffer);
+            let offset = 0;
+
+            // RIFF chunk descriptor
+            view.setUint32(offset, 0x52494646, false); // "RIFF"
+            offset += 4;
+            view.setUint32(offset, 36 + pcm16.length * bytesPerSample, true); // Chunk size
+            offset += 4;
+            view.setUint32(offset, 0x57415645, false); // "WAVE"
+            offset += 4;
+
+            // FMT sub-chunk
+            view.setUint32(offset, 0x666d7420, false); // "fmt "
+            offset += 4;
+            view.setUint32(offset, 16, true); // Sub-chunk size (16 for PCM)
+            offset += 4;
+            view.setUint16(offset, 1, true); // Audio format (1 for PCM)
+            offset += 2;
+            view.setUint16(offset, numChannels, true); // Number of channels
+            offset += 2;
+            view.setUint32(offset, sampleRate, true); // Sample rate
+            offset += 4;
+            view.setUint32(offset, sampleRate * numChannels * bytesPerSample, true); // Byte rate
+            offset += 4;
+            view.setUint16(offset, numChannels * bytesPerSample, true); // Block align
+            offset += 2;
+            view.setUint16(offset, bytesPerSample * 8, true); // Bits per sample (16)
+            offset += 2;
+
+            // Data sub-chunk
+            view.setUint32(offset, 0x64617461, false); // "data"
+            offset += 4;
+            view.setUint32(offset, pcm16.length * bytesPerSample, true); // Data size
+            offset += 4;
+
+            // PCM data
+            for (let i = 0; i < pcm16.length; i++) {
+                view.setInt16(offset, pcm16[i], true);
+                offset += 2;
+            }
+
+            return new Blob([buffer], { type: 'audio/wav' });
+        }
+        
+        // Função principal para chamar a API TTS
+        async function callTTSApi(text, statusElement, button) {
+            button.disabled = true;
+            statusElement.textContent = "Gerando áudio... 🔊";
+
+            const payload = {
+                contents: [{
+                    parts: [{ text: `Diga em tom informativo e firme em português: ${text}` }]
+                }],
+                generationConfig: {
+                    responseModalities: ["AUDIO"],
+                    speechConfig: {
+                        voiceConfig: {
+                            // Usando uma voz informativa em português (auto-detectado pelo texto)
+                            prebuiltVoiceConfig: { voiceName: "Kore" } 
+                        }
+                    }
+                },
+                model: "gemini-2.5-flash-preview-tts"
+            };
+
+            let audioUrl = null;
+            let retries = 0;
+            const maxRetries = 5;
+
+            while (retries < maxRetries) {
+                try {
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`Erro de rede: ${response.statusText}`);
+                    }
+
+                    const result = await response.json();
+                    const part = result?.candidates?.[0]?.content?.parts?.[0];
+                    const audioData = part?.inlineData?.data;
+                    const mimeType = part?.inlineData?.mimeType;
+
+                    if (audioData && mimeType && mimeType.startsWith("audio/L16")) {
+                        // A API retorna o mimetype como 'audio/L16;rate=16000'
+                        const match = mimeType.match(/rate=(\d+)/);
+                        const sampleRate = match ? parseInt(match[1], 10) : 16000;
+                        
+                        // O áudio é PCM 16-bit
+                        const pcmData = base64ToArrayBuffer(audioData);
+                        const pcm16 = new Int16Array(pcmData);
+                        
+                        const wavBlob = pcmToWav(pcm16, sampleRate);
+                        audioUrl = URL.createObjectURL(wavBlob);
+                        
+                        break; // Sucesso, sai do loop de retries
+                    } else {
+                        throw new Error("Resposta de áudio inválida ou incompleta.");
+                    }
+
+                } catch (error) {
+                    retries++;
+                    if (retries >= maxRetries) {
+                        console.error("Erro fatal após várias tentativas:", error);
+                        statusElement.textContent = "Erro ao gerar áudio.";
+                        button.disabled = false;
+                        return;
+                    }
+                    const delay = Math.pow(2, retries) * 1000;
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                }
+            }
+
+            if (audioUrl) {
+                const audio = new Audio(audioUrl);
+                audio.onplay = () => statusElement.textContent = "Reproduzindo...";
+                audio.onended = () => {
+                    statusElement.textContent = "Áudio concluído.";
+                    button.disabled = false;
+                    URL.revokeObjectURL(audioUrl); // Libera o objeto URL após a reprodução
+                };
+                audio.onerror = (e) => {
+                    console.error("Erro de reprodução de áudio:", e);
+                    statusElement.textContent = "Erro de reprodução.";
+                    button.disabled = false;
+                };
+                audio.play();
+            } else {
+                button.disabled = false;
+                statusElement.textContent = "Falha ao processar áudio.";
+            }
+        }
+
+        // Função de evento para o clique do botão
+        function playTTS(button) {
+            const card = button.closest('.card');
+            const textElement = card.querySelector('.tts-text');
+            const statusElement = card.querySelector('.tts-status');
+            
+            if (textElement && statusElement) {
+                const text = textElement.textContent.trim();
+                callTTSApi(text, statusElement, button);
+            } else {
+                console.error("Elementos de texto ou status não encontrados.");
+            }
+        }
+    </script>
+</body>
+</html>
